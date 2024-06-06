@@ -21,12 +21,25 @@ repositories {
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+
+    //web
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
+
+    //validation
+    implementation("org.springframework.boot:spring-boot-starter-validation")
+    implementation("jakarta.validation:jakarta.validation-api:3.0.2")
+
+    //mysql
     runtimeOnly("com.mysql:mysql-connector-j")
+
+    //test
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+
+    //swagger
+    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.2")
 }
 
 tasks.withType<KotlinCompile> {
